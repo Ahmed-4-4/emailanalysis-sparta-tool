@@ -1,0 +1,42 @@
+✅ 1) Install Git
+$ sudo apt update
+$ sudo apt install git -y
+Verify:
+$ git --version
+________________________________________
+✅ 2) Install Python + venv
+$ sudo apt install python3 python3-pip python3-venv -y
+Verify:
+$ python3 --version
+$ pip3 --version
+________________________________________
+✅ 3) Clone Sparta from GitHub
+$ git clone https://github.com/Ahmed-4-4/emailanalysis-sparta-tool.git
+$ cd emailanalysis-sparta-tool
+________________________________________
+✅ 4) Create Virtual Environment
+$ python3 -m venv venv
+Activate:
+$ source venv/bin/activate
+You should see:
+(venv) user@machine:~/emailanalysis-sparta-tool$
+________________________________________
+✅ 5) Install Requirements
+$ pip install -r requirements.txt
+Or manually:
+$ pip install dnspython dkimpy pyspf requests
+________________________________________
+✅ 6) Run the Tool
+$ python sparta.py sample.eml
+With VirusTotal:
+$ python sparta.py sample.eml --vt-api-key YOUR_API_KEY
+________________________________________
+✅ 7) Deactivate Environment
+$ deactivate
+________________________________________
+🔥 Every time you open a new terminal
+Just run:
+$ cd emailanalysis-sparta-tool
+$ source venv/bin/activate
+$ python sparta.py sample.eml
+
